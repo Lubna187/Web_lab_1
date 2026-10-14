@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Лабораторная работа №1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<table id="main">
+  <!-- ШАПКА -->
+  <tr>
+    <td id="header" colspan="2">
+      Lubna Yesmin (ISU 470649)<br>
+      <span>Группа: P3231 &nbsp;|&nbsp; Вариант: 22716</span>
+    </td>
+  </tr>
+
+  <!-- CANVAS + ФОРМА -->
+  <tr>
+    <td style="width:320px">
+      <canvas id="canvas" width="300" height="300"></canvas>
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td class="label">X:</td>
+          <td id="xGroup"></td>
+        </tr>
+        <tr>
+          <td class="label">Y (-3 … 3):</td>
+          <td><input type="text" id="y" maxlength="10" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <td class="label">R:</td>
+          <td id="rGroup"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="button" id="submit">Проверить</button></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="error" id="error"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ТАБЛИЦА РЕЗУЛЬТАТОВ -->
+  <tr>
+    <td colspan="2">
+      <table id="results">
+        <thead>
+          <tr><th>X</th><th>Y</th><th>R</th><th>Результат</th><th>Время проверки</th></tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
